@@ -1,0 +1,103 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "step",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": { "dockerfile": "Dockerfile" },
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"steoates.autoimport",
+				"mikestead.dotenv",
+				"editorconfig.editorconfig",
+				"dbaeumer.vscode-eslint",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"wix.vscode-import-cost",
+				"visualstudioexptteam.vscodein",
+				"orta.vscode-jest",
+				"davidanson.vscode-markdownlint",
+				"nrwl.angular-console",
+				"christian-kohler.path-intellisense",
+				"csstools.postcss",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"gruntfuggly.todo-tree",
+				"vue.volar",
+				"vue.vscode-typescript-vue-plugin",
+				"antfu.vite",
+				"redhat.vscode-yaml",
+				"redhat.vscode-xml"
+			],
+			"settings": {
+				// General
+				"editor.inlineSuggest.enabled": true,
+				"redhat.telemetry.enabled": false,
+				"editor.linkedEditing": true, // Enables renaming tags on vue files
+				"html.autoClosingTags": true,
+				"javascript.autoClosingTags": false,
+				"typescript.autoClosingTags": false,
+				"git.autofetch": true,
+				// Vite
+				"vite.browserType": "system",
+				"vite.buildCommand": "pnpm build",
+				"vite.devCommand": "pnpm dev",
+				"vite.autoStart": false,
+				// Tailwind
+				"files.associations": {
+					"*.css": "tailwindcss"
+				},
+				"editor.quickSuggestions": {
+					"strings": true
+				},
+				"tailwindCSS.includeLanguages": {
+					"plaintext": "html",
+					"vue": "html",
+					"vue-html": "html"
+				},
+				// Add any file here if you extend from the base config
+				"tailwindCSS.experimental.configFile": {
+					"packages/tailwind-config/tailwind.config.cjs": "packages/tailwind-config/**",
+					"packages/ui/tailwind.config.cjs": "packages/ui/**"
+				},
+				// Formatting
+				"editor.formatOnSave": true,
+				"[vue]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[html]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[jsonc]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[dockercompose]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				}
+			}
+		}
+	},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+}

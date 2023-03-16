@@ -1,0 +1,15 @@
+{
+	"files": [],
+	"extends": "./base.json",
+	"references": [
+		{
+			"path": "./node.json"
+		},
+		{
+			"path": "./vue-app.json"
+		},
+		{
+			"path": "./vitest.json"
+		}
+	]
+}

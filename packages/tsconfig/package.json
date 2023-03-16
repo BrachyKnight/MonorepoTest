@@ -1,0 +1,16 @@
+{
+	"name": "tsconfig",
+	"version": "0.0.0",
+	"private": true,
+	"files": [
+		"base.json",
+		"nextjs.json",
+		"react-library.json"
+	],
+	"devDependencies": {
+		"@vue/tsconfig": "^0.1.3"
+	},
+	"peerDependencies": {
+		"typescript": "~4.8.4"
+	}
+}

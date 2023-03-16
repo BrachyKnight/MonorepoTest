@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "ROOT",
+			"path": "../"
+		},
+		{
+			"name": "apps/host",
+			"path": "../apps/host"
+		},
+		{
+			"name": "packages/tsconfig",
+			"path": "../packages/tsconfig"
+		},
+		{
+			"name": "packages/eslint-config-custom",
+			"path": "../packages/eslint-config-custom"
+		},
+		{
+			"name": "packages/vite-config",
+			"path": "../packages/vite-config"
+		},
+		{
+			"name": "packages/tailwind-config",
+			"path": "../packages/tailwind-config"
+		},
+		{
+			"name": "packages/ui",
+			"path": "../packages/ui"
+		}
+	],
+	"settings": {}
+}

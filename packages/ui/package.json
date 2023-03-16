@@ -1,0 +1,48 @@
+{
+	"name": "ui",
+	"private": false,
+	"type": "module",
+	"version": "0.0.0",
+	"main": "dist/ui.cjs.js",
+	"module": "dist/ui.es.js",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/ui.es.js",
+			"require": "./dist/ui.cjs.js"
+		}
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build && pnpm run build:styles",
+		"build:styles": "npx postcss src/index.css -o dist/index.css",
+		"lint": "eslint *.ts*"
+	},
+	"peerDependencies": {
+		"vue": "^3.2.47"
+	},
+	"devDependencies": {
+		"vue": "^3.2.47",
+		"@vitejs/plugin-vue": "^4.0.0",
+		"vite": "^4.1.4",
+		"vite-plugin-dts": "^2.1.0",
+		"vitest": "^0.29.1",
+		"vue-tsc": "^1.2.0",
+		"tsconfig": "workspace:*",
+		"tailwind-config": "workspace:*",
+		"eslint-config-custom": "workspace:*"
+	},
+	"dependenciesMeta": {
+		"tsconfig": {
+			"injected": true
+		},
+		"eslint-config-custom": {
+			"injected": true
+		},
+		"tailwind-config-custom": {
+			"injected": true
+		}
+	}
+}
